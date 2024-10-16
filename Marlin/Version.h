@@ -46,7 +46,7 @@
 /**
  * Defines a generic printer name to be output to the LCD after booting Marlin.
  */
-#define MACHINE_NAME "BlueCobalt - SKR 1.3" // Dan was DISABLED
+#define MACHINE_NAME "CobaltBlue - SKR 1.3" // Dan was DISABLED
 
 /**
  * The SOURCE_CODE_URL is the location where users will find the Marlin Source
