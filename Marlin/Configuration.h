@@ -61,7 +61,7 @@
 // @section info
 
 // Author info of this build printed to the host during boot and M115
-#define STRING_CONFIG_H_AUTHOR "(CobaltBlue, SKR 1.3)" // Who made the changes.
+#define STRING_CONFIG_H_AUTHOR "(BlueCobalt, SKR 1.3)" // Who made the changes.
 #define CUSTOM_VERSION_FILE Version.h // Dan was DISABLED // Path from the root directory (no quotes)
 
 // @section machine
@@ -564,7 +564,7 @@
  *   998 : Dummy Table that ALWAYS reads 25°C or the temperature defined below.
  *   999 : Dummy Table that ALWAYS reads 100°C or the temperature defined below.
  */
-#define TEMP_SENSOR_0 1047 // Dan was 1 FOR FACTORY TEMP / 1047 for PT1000
+#define TEMP_SENSOR_0 5 // Dan was 1 FOR FACTORY TEMP / 1047 for PT1000
 #define TEMP_SENSOR_1 0
 #define TEMP_SENSOR_2 0
 #define TEMP_SENSOR_3 0
@@ -648,7 +648,7 @@
 // Above this temperature the heater will be switched off.
 // This can protect components from overheating, but NOT from shorts and failures.
 // (Use MINTEMP for thermistor short/failure protection.)
-#define HEATER_0_MAXTEMP 275
+#define HEATER_0_MAXTEMP 300 //Dan was 275
 #define HEATER_1_MAXTEMP 275
 #define HEATER_2_MAXTEMP 275
 #define HEATER_3_MAXTEMP 275
@@ -2075,7 +2075,7 @@
  * these options to restore the prior leveling state or to always enable
  * leveling immediately after G28.
  */
-//#define RESTORE_LEVELING_AFTER_G28
+//#define RESTORE_LEVELING_AFTER_G28	
 #define ENABLE_LEVELING_AFTER_G28	// Dan was DISABLED
 
 /**
