@@ -3903,7 +3903,7 @@
 /**
  * Auto-report position with M154 S<seconds>
  */
-//#define AUTO_REPORT_POSITION
+#define AUTO_REPORT_POSITION  // Dan was DISABLED
 #if ENABLED(AUTO_REPORT_POSITION)
   //#define AUTO_REPORT_REAL_POSITION // Dan was DISABLED // Auto-report the real position
 #endif
@@ -4311,7 +4311,7 @@
                                           // See class CodeProfiler.
   //#define MAX7219_DEBUG_MULTISTEPPING 6 // Show multi-stepping 1 to 128 on this LED matrix row.
   #define MAX7219_DEBUG_SLOWDOWN      7  	// Dan was DISABLED and 6  // Count (mod 16) how many times SLOWDOWN has reduced print speed.
-  //#define MAX7219_REINIT_ON_POWERUP     // Re-initialize MAX7129 when power supply turns on
+  #define MAX7219_REINIT_ON_POWERUP       //  Dan was DISABLED Re-initialize MAX7129 when power supply turns on
 #endif
 
 /**

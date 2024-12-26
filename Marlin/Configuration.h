@@ -2068,7 +2068,7 @@
  */
 // Used to be called Z_PROBE_END_SCRIPT
 //#define EVENT_GCODE_AFTER_G29 "G1 Z10 F12000\nG1 X15 Y330\nG1 Z0.5\nG1 Z10"
-#define EVENT_GCODE_AFTER_G29 "G1 X0 Y200 Z30 F6000"	// Dan 
+#define EVENT_GCODE_AFTER_G29 "G1 X0 Y220 F6000"	// Dan Z30
 
 /**
  * Normally G28 leaves leveling disabled on completion. Enable one of
@@ -2137,7 +2137,7 @@
 #if ANY(AUTO_BED_LEVELING_LINEAR, AUTO_BED_LEVELING_BILINEAR)
 
   // Set the number of grid points per dimension.
-  #define GRID_MAX_POINTS_X 8 // Dan was 3
+  #define GRID_MAX_POINTS_X 6 // Dan was 3
   #define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
 
   // Probe along the Y axis, advancing X after each column
