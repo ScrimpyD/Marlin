@@ -1515,7 +1515,7 @@
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
-#define PROBING_MARGIN 20	// Dan was 10
+#define PROBING_MARGIN 10	// Dan was 10
 
 // X and Y axis travel speed (mm/min) between probes
 //#define XY_PROBE_FEEDRATE (240*60)	// Dan was (133*60)
@@ -1524,7 +1524,7 @@
 #define Z_PROBE_FEEDRATE_FAST 2000	// 6000=100mm/sec  // Dan was  (4*60)
 
 // Feedrate (mm/min) for the "accurate" probe of each point
-#define Z_PROBE_FEEDRATE_SLOW 400 // 2400=8mm/sec  // Dan was (Z_PROBE_FEEDRATE_FAST / 5)  // Dan was 2
+#define Z_PROBE_FEEDRATE_SLOW 300 // 2400=8mm/sec  // Dan was (Z_PROBE_FEEDRATE_FAST / 5)  // Dan was 2
 
 /**
  * Probe Activation Switch
