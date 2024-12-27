@@ -28,20 +28,20 @@
 /**
  * Marlin release version identifier
  */
-//#define SHORT_BUILD_VERSION "2.1.2.5"
+#define SHORT_BUILD_VERSION "2.1.2.5"    // Dan was DISABLED
 
 /**
  * Verbose version identifier which should contain a reference to the location
  * from where the binary was downloaded or the source code was compiled.
  */
-//#define DETAILED_BUILD_VERSION SHORT_BUILD_VERSION
+#define DETAILED_BUILD_VERSION "2.1.2.5-D2" // Dan was DISABLED and set to SHORT_BUILD_VERSION
 
 /**
  * The STRING_DISTRIBUTION_DATE represents when the binary file was built,
  * here we define this default string as the date where the latest release
  * version was tagged.
  */
-//#define STRING_DISTRIBUTION_DATE "2024-11-18"
+//#define STRING_DISTRIBUTION_DATE "2024-11-18"   // Dan was DISABLED
 
 /**
  * The protocol for communication to the host. Protocol indicates communication
@@ -53,7 +53,7 @@
 /**
  * Defines a generic printer name to be output to the LCD after booting Marlin.
  */
-//#define MACHINE_NAME "3D Printer"
+#define MACHINE_NAME "CobaltBlue - SKR 1.3" // Dan was DISABLED
 
 /**
  * The SOURCE_CODE_URL is the location where users will find the Marlin Source
@@ -66,7 +66,7 @@
 /**
  * Default generic printer UUID.
  */
-//#define DEFAULT_MACHINE_UUID "cede2a2f-41a2-4748-9b12-c55c62f367ff"
+#define DEFAULT_MACHINE_UUID "cede2a2f-41a2-4748-9b12-c55c62f367ff" // Dan was DISABLED
 
 /**
  * The WEBSITE_URL is the location where users can get more information such as
