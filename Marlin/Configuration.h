@@ -651,7 +651,7 @@
  * (especially before PID tuning). Setting the target temperature too close to MAXTEMP guarantees
  * a MAXTEMP shutdown! Use these values to forbid temperatures being set too close to MAXTEMP.
  */
-#define HOTEND_OVERSHOOT 15   // (°C) Forbid temperatures over MAXTEMP - OVERSHOOT
+#define HOTEND_OVERSHOOT 5    // Dan was 15  // (°C) Forbid temperatures over MAXTEMP - OVERSHOOT
 #define BED_OVERSHOOT    10   // (°C) Forbid temperatures over MAXTEMP - OVERSHOOT
 #define COOLER_OVERSHOOT  2   // (°C) Forbid temperatures closer than OVERSHOOT
 
@@ -1203,7 +1203,7 @@
  * Override with M203
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_FEEDRATE          { 80, 80, 20, 120 } // Dan was { 300, 300, 5, 25 }
+#define DEFAULT_MAX_FEEDRATE          { 300, 300, 25, 120 } // Dan was { 300, 300, 5, 25 }
 
 //#define LIMITED_MAX_FR_EDITING        // Limit edit via M203 or LCD to DEFAULT_MAX_FEEDRATE * 2
 #if ENABLED(LIMITED_MAX_FR_EDITING)
@@ -1521,7 +1521,7 @@
 //#define XY_PROBE_FEEDRATE (240*60)	// Dan was (133*60)
 
 // Feedrate (mm/min) for the first approach when double-probing (MULTIPLE_PROBING == 2)
-#define Z_PROBE_FEEDRATE_FAST 2000	// 6000=100mm/sec  // Dan was  (4*60)
+#define Z_PROBE_FEEDRATE_FAST 1000	// 6000=100mm/sec  // Dan was  (4*60)
 
 // Feedrate (mm/min) for the "accurate" probe of each point
 #define Z_PROBE_FEEDRATE_SLOW 300 // 2400=8mm/sec  // Dan was (Z_PROBE_FEEDRATE_FAST / 5)  // Dan was 2
@@ -1724,8 +1724,8 @@
 // @section geometry
 
 // The size of the printable area
-#define X_BED_SIZE 220	// Dan was 200
-#define Y_BED_SIZE 210	// Dan was 200
+#define X_BED_SIZE 230	// Dan was 200
+#define Y_BED_SIZE 225	// Dan was 200
 
 // Travel limits (linear=mm, rotational=°) after homing, corresponding to endstop positions.
 #define X_MIN_POS 0
@@ -1914,7 +1914,7 @@
  * Useful to retract or move the Z probe out of the way.
  */
 //#define Z_PROBE_END_SCRIPT "G1 Z10 F12000\nG1 X15 Y330\nG1 Z0.5\nG1 Z10"
-#define EVENT_GCODE_AFTER_G29 "G1 X0 Y220 F6000"	// Dan Z30
+#define EVENT_GCODE_AFTER_G29 "G1 X0 Y220"	// Dan Z30 F6000
 
 /**
  * Normally G28 leaves leveling disabled on completion. Enable one of
@@ -1992,7 +1992,7 @@
 #if EITHER(AUTO_BED_LEVELING_LINEAR, AUTO_BED_LEVELING_BILINEAR)
 
   // Set the number of grid points per dimension.
-  #define GRID_MAX_POINTS_X 6 // Dan was 3
+  #define GRID_MAX_POINTS_X 5 // Dan was 3
   #define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
 
   // Probe along the Y axis, advancing X after each column

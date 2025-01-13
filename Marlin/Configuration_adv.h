@@ -3728,7 +3728,7 @@
  *
  * Execute certain G-code commands immediately after power-on.
  */
-#define STARTUP_COMMANDS "M17 Z \n  M280 P0 S60" // Dan added ' M280 P0 S60' to reset BLTouch blink on powerup
+#define STARTUP_COMMANDS "M17 Z \n  M280 P0 S60" // Dan added 'M280 P0 S60' to reset BLTouch blink on powerup
 
 /**
  * G-code Macros
