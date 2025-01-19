@@ -3749,17 +3749,17 @@
 
 // @section custom main menu
 
-// Custom Menu: Main Menu	// Dan  future stuff
-//#define CUSTOM_MENU_MAIN
+// Custom Menu: Main Menu	// Dan future stuff
+#define CUSTOM_MENU_MAIN
 #if ENABLED(CUSTOM_MENU_MAIN)
-  //#define CUSTOM_MENU_MAIN_TITLE "Custom Commands"
+  #define CUSTOM_MENU_MAIN_TITLE "Custom Commands"
   #define CUSTOM_MENU_MAIN_SCRIPT_DONE "M117 User Script Done"
   #define CUSTOM_MENU_MAIN_SCRIPT_AUDIBLE_FEEDBACK
   //#define CUSTOM_MENU_MAIN_SCRIPT_RETURN   // Return to status screen after a script
   #define CUSTOM_MENU_MAIN_ONLY_IDLE         // Only show custom menu when the machine is idle
 
   #define MAIN_MENU_ITEM_1_DESC "Home & UBL Info"
-  #define MAIN_MENU_ITEM_1_GCODE "G28\nG29 W"
+  #define MAIN_MENU_ITEM_1_GCODE "G28\nG29V4 W" //Dan was "G28\nG29 W"
   //#define MAIN_MENU_ITEM_1_CONFIRM          // Show a confirmation dialog before this action
 
   #define MAIN_MENU_ITEM_2_DESC "Preheat for " PREHEAT_1_LABEL
@@ -3771,12 +3771,16 @@
   //#define MAIN_MENU_ITEM_3_CONFIRM
 
   //#define MAIN_MENU_ITEM_4_DESC "Heat Bed/Home/Level"
-  //#define MAIN_MENU_ITEM_4_GCODE "M140 S" STRINGIFY(PREHEAT_2_TEMP_BED) "\nG28\nG29"
+  //#define MAIN_MENU_ITEM_4_GCODE "M140 S" STRINGIFY(PREHEAT_2_TEMP_BED) "\nG28\nG29V4"
   //#define MAIN_MENU_ITEM_4_CONFIRM
 
   //#define MAIN_MENU_ITEM_5_DESC "Home & Info"
   //#define MAIN_MENU_ITEM_5_GCODE "G28\nM503"
   //#define MAIN_MENU_ITEM_5_CONFIRM
+  
+  //#define MAIN_MENU_ITEM_6_DESC ""Bed Visualize"" //Dan added ITEM 6
+  //#define MAIN_MENU_ITEM_6_GCODE "M118 A1 action:BEDLEVELVISUALIZER_LEVELBED"
+  //#define MAIN_MENU_ITEM_6_CONFIRM
 #endif
 
 // @section custom config menu
@@ -3813,7 +3817,7 @@
 
 // @section custom buttons
 
-/**
+/** // Dan future stuff
  * User-defined buttons to run custom G-code.
  * Up to 25 may be defined.
  */
