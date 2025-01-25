@@ -1572,7 +1572,7 @@
  * A total of 3 or more adds more slow probes, taking the average.
  */
 #define MULTIPLE_PROBING 2 // Dan was DISABLED
-//#define EXTRA_PROBING    1
+#define EXTRA_PROBING    2  // Dan was DISABLED adn set to 1
 
 /**
  * Z probes require clearance when deploying, stowing, and moving between
